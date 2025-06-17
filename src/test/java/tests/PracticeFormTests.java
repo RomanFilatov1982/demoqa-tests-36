@@ -46,7 +46,7 @@ public class PracticeFormTests {
         $("select.react-datepicker__year-select").selectOption("1982"); //
         $(".react-datepicker__day--018").click(); //:not(.react-datepicker__day--outside-month)
 
-        $("#subjectsInput").setValue("Fisics").pressEnter();
+        $("#subjectsInput").setValue("Physics").pressEnter();
 
         $("#hobbiesWrapper").$(byText("Sports")).click(); //правильно
 
@@ -55,13 +55,14 @@ public class PracticeFormTests {
 
 
         $("#currentAddress").setValue("Proxladnaya street 28");
-        //$(".css-yk16xz-control").click();
+
         $("#state").click();
-        $(".css-1pahdxg-control").shouldBe(visible);
-        $$(". css-1uccc91-singleValue").findBy(text("Haryana")).click();
+        $("#stateCity-wrapper").$(byText("Haryana")).click();
+        //$("#react-select-3-option-2").click();
+
         $("#city").click();
-        $(".css-11unzgr").shouldHave(Condition.text("Karnal"));
-        $(".css-11unzgr div").shouldHave(Condition.exactText("Karnal"));
+        $("#stateCity-wrapper").$(byText("Karnal")).click();
+
         $("#submit").click();
 
     }
