@@ -2,6 +2,7 @@ package tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -24,6 +25,8 @@ public class PracticeFormTests {
     @Test
     void fillFormTests(){
         open("/automation-practice-form"); // правильно
+       // executeJavaScript("S('#fixedban').remove()");
+        //executeJavaScript("S('footer').remove()");
 
         $("#firstName").setValue("Roman"); //правильно
 
@@ -47,7 +50,9 @@ public class PracticeFormTests {
 
         $("#hobbiesWrapper").$(byText("Sports")).click(); //правильно
 
-        $("#uploadPicture").uploadFromClasspath(new File());
+        $("#uploadPicture").uploadFromClasspath("/img/.png");
+        //$("#uploadPicture").uploadFile(new File("src/test/resources/img/.png"));
+
 
         $("#currentAddress").setValue("Proxladnaya street 28");
         //$(".css-yk16xz-control").click();
