@@ -25,8 +25,9 @@ public class PracticeFormTests {
     @Test
     void fillFormTests(){
         open("/automation-practice-form"); // правильно
-       // executeJavaScript("S('#fixedban').remove()");
-        //executeJavaScript("S('footer').remove()");
+
+       //executeJavaScript("S('#fixedban').remove()");
+       //executeJavaScript("S('footer').remove()");
 
         $("#firstName").setValue("Roman"); //правильно
 
@@ -46,12 +47,13 @@ public class PracticeFormTests {
         $("select.react-datepicker__year-select").selectOption("1982"); //
         $(".react-datepicker__day--018").click(); //:not(.react-datepicker__day--outside-month)
 
-        $("#subjectsInput").setValue("Physics").pressEnter();
+        $("#subjectsInput").setValue("Physics").pressEnter().scrollTo();
 
         $("#hobbiesWrapper").$(byText("Sports")).click(); //правильно
 
-        $("#uploadPicture").uploadFromClasspath("/img/.png");
-        //$("#uploadPicture").uploadFile(new File("src/test/resources/img/.png"));
+        $("#uploadPicture").uploadFromClasspath("img/main-2.jpg");
+
+        //$("#uploadPicture").uploadFile(new File("src/test/resources/img/main-2.jpg"));
 
 
         $("#currentAddress").setValue("Proxladnaya street 28");
@@ -64,6 +66,10 @@ public class PracticeFormTests {
         $("#stateCity-wrapper").$(byText("Karnal")).click();
 
         $("#submit").click();
+
+        $(".modal-dialog").should(appear);
+        $("#example-modal-size-title-lg").shouldHave(text("Thanks for submitting the form\n"));
+
 
     }
 }
