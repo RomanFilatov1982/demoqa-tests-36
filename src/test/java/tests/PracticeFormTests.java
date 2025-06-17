@@ -17,7 +17,6 @@ public class PracticeFormTests {
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 5000;
     }
@@ -29,35 +28,42 @@ public class PracticeFormTests {
        //executeJavaScript("S('#fixedban').remove()");
        //executeJavaScript("S('footer').remove()");
 
-        $("#firstName").setValue("Roman"); //правильно
+        //Name
+        $("#firstName").setValue("Roman");
+        $("#lastName").setValue("Filatov");
 
-        $("#lastName").setValue("Filatov"); //правильно
+        //Email
+        $("#userEmail").setValue("romanf@gmail.com");
 
-        $("#userEmail").setValue("romanf@gmail.com"); //правильно
+        //Gender
+        $("#genterWrapper").$(byText("Male")).click();
+        //$("[for=gender-radio-1]").click();
+        //$("#gender-radio-1").parent().click();
+        //$(byText("Other")).click();
 
-        $("#genterWrapper").$(byText("Male")).click(); //правильно
-        //$("[for=gender-radio-1]").click(); //правильно
-        //$("#gender-radio-1").parent().click(); //правильно
-        //$(byText("Other")).click(); //правильно
+        // Блок Mobile
+        $("#userNumber").setValue("9085693730");
 
-        $("#userNumber").setValue("9085693730"); //правильно
-
-        $("#dateOfBirthInput").click(); //правильно
-        $(".react-datepicker__month-select").selectOption("January"); // правильно
-        $("select.react-datepicker__year-select").selectOption("1982"); //
+        //Date of Birth
+        $("#dateOfBirthInput").click();
+        $(".react-datepicker__month-select").selectOption("January");
+        $("select.react-datepicker__year-select").selectOption("1982");
         $(".react-datepicker__day--018").click(); //:not(.react-datepicker__day--outside-month)
 
+        //Subjects
         $("#subjectsInput").setValue("Physics").pressEnter().scrollTo();
 
-        $("#hobbiesWrapper").$(byText("Sports")).click(); //правильно
+        //Hobbies
+        $("#hobbiesWrapper").$(byText("Sports")).click();
 
+        //Picture
         $("#uploadPicture").uploadFromClasspath("img/main-2.jpg");
-
         //$("#uploadPicture").uploadFile(new File("src/test/resources/img/main-2.jpg"));
 
-
+        //Current Address
         $("#currentAddress").setValue("Proxladnaya street 28");
 
+        //State and City
         $("#state").click();
         $("#stateCity-wrapper").$(byText("Haryana")).click();
         //$("#react-select-3-option-2").click();
@@ -65,11 +71,14 @@ public class PracticeFormTests {
         $("#city").click();
         $("#stateCity-wrapper").$(byText("Karnal")).click();
 
+        //button Submit
         $("#submit").click();
 
+        //last Form
         $(".modal-dialog").should(appear);
-        $("#example-modal-size-title-lg").shouldHave(text("Thanks for submitting the form\n"));
-
-
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        $(".table-responsive").shouldHave(text("Roman Filatov"), text("romanf@gmail.com"),
+        text("Male"), text("9085693730"), text("18 January,1982"), text("Physics"), text("Sports"),
+        text("main-2.jpg"), text("Proxladnaya street 28"), text("Haryana Karnal"));
     }
 }
