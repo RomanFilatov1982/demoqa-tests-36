@@ -47,8 +47,8 @@ public class PracticeFormTests {
 
         $("#hobbiesWrapper").$(byText("Sports")).click(); //правильно
 
-        //$("#uploadPicture").uploadFile(new File("path/to/Screenshot_46.png"));
-        File file = new File("src/test/resources/Screenshot_46.png");
+        $("#uploadPicture").uploadFromClasspath(new File());
+
         $("#currentAddress").setValue("Proxladnaya street 28");
         //$(".css-yk16xz-control").click();
         $("#state").click();
