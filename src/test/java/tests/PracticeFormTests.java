@@ -1,12 +1,8 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import java.io.File;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
@@ -23,10 +19,10 @@ public class PracticeFormTests {
 
     @Test
     void fillFormTests(){
-        open("/automation-practice-form"); // правильно
+        open("/automation-practice-form");
 
-       //executeJavaScript("S('#fixedban').remove()");
-       //executeJavaScript("S('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
 
         //Name
         $("#firstName").setValue("Roman");
@@ -37,9 +33,6 @@ public class PracticeFormTests {
 
         //Gender
         $("#genterWrapper").$(byText("Male")).click();
-        //$("[for=gender-radio-1]").click();
-        //$("#gender-radio-1").parent().click();
-        //$(byText("Other")).click();
 
         // Блок Mobile
         $("#userNumber").setValue("9085693730");
@@ -58,7 +51,6 @@ public class PracticeFormTests {
 
         //Picture
         $("#uploadPicture").uploadFromClasspath("img/main-2.jpg");
-        //$("#uploadPicture").uploadFile(new File("src/test/resources/img/main-2.jpg"));
 
         //Current Address
         $("#currentAddress").setValue("Proxladnaya street 28");
@@ -66,7 +58,6 @@ public class PracticeFormTests {
         //State and City
         $("#state").click();
         $("#stateCity-wrapper").$(byText("Haryana")).click();
-        //$("#react-select-3-option-2").click();
 
         $("#city").click();
         $("#stateCity-wrapper").$(byText("Karnal")).click();
