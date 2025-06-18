@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PracticeFormTests {
+
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
@@ -18,7 +19,7 @@ public class PracticeFormTests {
     }
 
     @Test
-    void fillFormTests(){
+    void fillFormTests() {
         open("/automation-practice-form");
 
         executeJavaScript("$('#fixedban').remove()");
@@ -69,7 +70,7 @@ public class PracticeFormTests {
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(text("Roman Filatov"), text("romanf@gmail.com"),
-        text("Male"), text("9085693730"), text("18 January,1982"), text("Physics"), text("Sports"),
-        text("main-2.jpg"), text("Proxladnaya street 28"), text("Haryana Karnal"));
+                text("Male"), text("9085693730"), text("18 January,1982"), text("Physics"), text("Sports"),
+                text("main-2.jpg"), text("Proxladnaya street 28"), text("Haryana Karnal"));
     }
 }

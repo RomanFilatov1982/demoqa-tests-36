@@ -8,31 +8,38 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SimpleJUnitTest {
     int result;
+
     @BeforeAll
     static void beforeAll() {
         System.out.println("\n###  beforeAll()\n");
     }
 
-    @BeforeEach // название аннотации
+    @BeforeEach
+        // название аннотации
     void beforeEach() {
         System.out.println("###   beforeEach()");
         result = getResult();
     }
-    @AfterEach // название аннотации
+
+    @AfterEach
+        // название аннотации
     void afterEach() {
         System.out.println("###   afterEach()\n");
         result = 0;
     }
+
     @Test
     void firstTest() {
         System.out.println("###   firstTest()");
         Assertions.assertTrue(result > 2);
     }
+
     @Test
     void secondTest() {
         System.out.println("###   secondTest()");
         Assertions.assertTrue(result > 2);
     }
+
     @Test
     void thirdTest() {
         System.out.println("###   thirdTest()");

@@ -17,6 +17,7 @@ public class TextBoxTests {
         Configuration.holdBrowserOpen = true;
         Configuration.timeout = 5000;
     }
+
     @Test
     void fillFormTest() {
         open("/text-box");
@@ -25,7 +26,7 @@ public class TextBoxTests {
         $("#currentAddress").setValue("Some street 28");
         $("#permanentAddress").setValue("Another street 28");
         $("#submit").click();
-        
+
         $("#output").$("#name").shouldHave(text("Roman"));
         $("#output").$("#email").shouldHave(text("romaF@gmail.com"));
         $("#output").$("#currentAddress").shouldHave(text("Some street 28"));
