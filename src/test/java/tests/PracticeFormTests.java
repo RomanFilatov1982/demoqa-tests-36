@@ -11,11 +11,10 @@ import static com.codeborne.selenide.Selenide.*;
 public class PracticeFormTests {
 
     @BeforeAll
-    static void beforeAll() {
+    static void formTest() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.timeout = 5000;
     }
 
     @Test
@@ -25,48 +24,36 @@ public class PracticeFormTests {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
-        //Name
         $("#firstName").setValue("Roman");
         $("#lastName").setValue("Filatov");
 
-        //Email
         $("#userEmail").setValue("romanf@gmail.com");
 
-        //Gender
         $("#genterWrapper").$(byText("Male")).click();
 
-        // Блок Mobile
         $("#userNumber").setValue("9085693730");
 
-        //Date of Birth
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("January");
         $("select.react-datepicker__year-select").selectOption("1982");
         $(".react-datepicker__day--018").click(); //:not(.react-datepicker__day--outside-month)
 
-        //Subjects
         $("#subjectsInput").setValue("Physics").pressEnter().scrollTo();
 
-        //Hobbies
         $("#hobbiesWrapper").$(byText("Sports")).click();
 
-        //Picture
         $("#uploadPicture").uploadFromClasspath("img/main-2.jpg");
 
-        //Current Address
         $("#currentAddress").setValue("Proxladnaya street 28");
 
-        //State and City
         $("#state").click();
         $("#stateCity-wrapper").$(byText("Haryana")).click();
 
         $("#city").click();
         $("#stateCity-wrapper").$(byText("Karnal")).click();
 
-        //button Submit
         $("#submit").click();
 
-        //last Form
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(text("Roman Filatov"), text("romanf@gmail.com"),
