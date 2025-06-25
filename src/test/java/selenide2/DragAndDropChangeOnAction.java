@@ -1,4 +1,4 @@
-package celenide2;
+package selenide2;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
