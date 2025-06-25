@@ -23,6 +23,9 @@ public class DragAndDropChangeOnAction {
         $("#column-b").shouldHave(text("B"));
 
         $("#column-a").dragAndDrop(to("#column-b"));
+
+        $("#column-a").shouldHave(text("B"));
+        $("#column-b").shouldHave(text("A"));
     }
     @Test
     void actionsTest() {

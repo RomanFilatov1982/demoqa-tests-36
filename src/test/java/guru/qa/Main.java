@@ -9,7 +9,7 @@ public class Main {
         boolean res3 = Calc.getLogicOperation();
         float res4 = Calc.getSumTwoFloat();
         int res5 = Calc.getIntegerMore();
-        System.out.print("Экономические расчеты:\n");
+        System.out.println("Экономические расчеты:");
         System.out.println("a + (b * a) = " + res1);
         System.out.println("(d / a) - c = " + res2);
         System.out.println("c < b = " + res3);
