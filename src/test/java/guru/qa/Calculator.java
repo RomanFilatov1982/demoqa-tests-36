@@ -1,9 +1,9 @@
-package guru.qa.JavaTest;
+package guru.qa;
 
 public class Calculator {
     int a = 6;
     int b = 24;
-    int c = 2;
+    int c = 12;
     double d = 85.6;
 
     float e = 3.40282350000000000000000000000000000000f;
