@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ddf954d-0b15-48a2-91c6-9f359e9537a1" name="Changes" comment="delete comment, changed @BeforeAll, gitignore">
+    <list default="true" id="7ddf954d-0b15-48a2-91c6-9f359e9537a1" name="Changes" comment="changed @BeforeAll, class">
+      <change afterPath="$PROJECT_DIR$/src/test/java/guru/qa/JavaTest/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/guru/qa/JavaTest/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_06_2025_18_18_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_06_2025_18_18__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DragDrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DragAndDropChangeOnAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SolutionsEnterprises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SolutionsEnterprises.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DragAndDropChangeOnAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/celenide2/DragAndDropChangeOnAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchCodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/celenide1/SearchCodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SolutionsEnterprises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/celenide2/SolutionsEnterprises.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +74,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/demoqa-tests-36/src/test/resources/img&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/qa_guru_36_java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -84,6 +89,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\demoqa-tests-36\src\test\resources\img" />
       <recent name="C:\Users\User\IdeaProjects\demoqa-tests-36\src\test\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="guru.qa" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.DragDrop.DragAndDropTest">
@@ -319,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1750764034611</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="changed @BeforeAll, class">
+      <created>1750764741938</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1750764741938</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,7 +366,8 @@
     <MESSAGE value="deleted not use imports, commits, and changed JS" />
     <MESSAGE value="changed" />
     <MESSAGE value="delete comment, changed @BeforeAll, gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete comment, changed @BeforeAll, gitignore" />
+    <MESSAGE value="changed @BeforeAll, class" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed @BeforeAll, class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

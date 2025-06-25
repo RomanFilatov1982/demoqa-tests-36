@@ -1,4 +1,4 @@
-package tests;
+package celenide2;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
